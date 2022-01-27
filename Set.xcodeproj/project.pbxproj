@@ -11,6 +11,8 @@
 		2B26019627A2330C00F2416F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B26019527A2330C00F2416F /* ContentView.swift */; };
 		2B26019827A2330C00F2416F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B26019727A2330C00F2416F /* Assets.xcassets */; };
 		2B26019B27A2330C00F2416F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B26019A27A2330C00F2416F /* Preview Assets.xcassets */; };
+		2B2601A527A249FD00F2416F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2601A427A249FD00F2416F /* Card.swift */; };
+		2B2601A727A260BB00F2416F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2601A627A260BB00F2416F /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		2B26019527A2330C00F2416F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2B26019727A2330C00F2416F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B26019A27A2330C00F2416F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2B2601A427A249FD00F2416F /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		2B2601A627A260BB00F2416F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +56,9 @@
 			isa = PBXGroup;
 			children = (
 				2B26019327A2330C00F2416F /* SetApp.swift */,
-				2B26019527A2330C00F2416F /* ContentView.swift */,
+				2B2601A327A2333200F2416F /* Views */,
+				2B2601A227A2332C00F2416F /* ViewModels */,
+				2B2601A127A2332500F2416F /* Models */,
 				2B26019727A2330C00F2416F /* Assets.xcassets */,
 				2B26019927A2330C00F2416F /* Preview Content */,
 			);
@@ -65,6 +71,30 @@
 				2B26019A27A2330C00F2416F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2B2601A127A2332500F2416F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2B2601A427A249FD00F2416F /* Card.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2B2601A227A2332C00F2416F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		2B2601A327A2333200F2416F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2B26019527A2330C00F2416F /* ContentView.swift */,
+				2B2601A627A260BB00F2416F /* CardView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +168,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B26019627A2330C00F2416F /* ContentView.swift in Sources */,
+				2B2601A527A249FD00F2416F /* Card.swift in Sources */,
+				2B2601A727A260BB00F2416F /* CardView.swift in Sources */,
 				2B26019427A2330C00F2416F /* SetApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
