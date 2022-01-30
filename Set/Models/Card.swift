@@ -9,8 +9,10 @@ import Foundation
 import SwiftUI
 
 struct Card {
-    var number: Int
-    var color: String
-    var shape: String
-    var shading: String
+    var id: UUID
+    var numberOfShapes: Int
+    var color: Color
+    var shape: CardShapes
+    var shading: CardShadings
+    var isMatched = false
 }
