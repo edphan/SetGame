@@ -8,9 +8,37 @@
 import Foundation
 import SwiftUI
 
-class SetGameViewModel {
-    static var num = [1, 2, 3]
-    static var color = [Color.blue, Color.red, Color.green]
-    static var shape = ["rectangle", "capsule", "circle"]
-    static var shading = ["solid", "transparent", "open"]
+class SetGameViewModel: ObservableObject {
+    static let numbers = [1, 2, 3]
+    static let colors = [Color.blue, Color.red, Color.green]
+
+    static func startSetGame() -> SetGameModel {
+        var cards: [Card] = []
+        for num in numbers {
+            for color in colors {
+                for shape in CardShapes.allCases {
+                    for shading in CardShadings.allCases {
+                        cards.append(Card(id: UUID(), numberOfShapes: num, color: color, shape: shape, shading: shading))
+                    }
+                }
+            }
+        }
+        return SetGameModel(cards: cards)
+    }
+    
+    @Published var model: SetGameModel
+    
+    init() {
+        model = SetGameViewModel.startSetGame()
+    }
+    
+    // MARK: - Intent Functions
+    
+    // Begins the game
+    
+    // Add 3 more cards
+    
+    // User selects a card
+    
+    // Check to see if the selected cards matched
 }

@@ -30,26 +30,32 @@ struct CardView: View {
     var body: some View {
         ZStack {
             Rectangle()
-                .opacity(0)
+                .fill(.white)
+                .shadow(color: Color.gray.opacity(0.5), radius: 3, x: 1, y: 2)
                 
-            VStack {
+            VStack(spacing: 10) {
                 ForEach(0..<card.numberOfShapes, id: \.self) { _ in
-                    ZStack {
-                        shape(card.shape).opacity(self.opacity)
-                        shape(card.shape)
-                            .stroke(lineWidth: 5)
-                    }
-                    .aspectRatio(1, contentMode: .fit)
-                    .padding(.vertical)
+                    shape(card.shape)
+                        .opacity(self.opacity)
+                        .overlay {
+                            shape(card.shape)
+                                .stroke(lineWidth: 4)
+                        }
+                        .foregroundColor(card.color)
+                        .aspectRatio(1, contentMode: .fit)
                 }
             }
+            .padding(10)
             .foregroundColor(card.color)
         }
+        .aspectRatio(4/7, contentMode: .fit)
+        .padding(10)
     }
 }
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
         CardView(card: Card(id: UUID(), numberOfShapes: 3, color: Color.blue, shape: .diamond, shading: .transparent))
+            .frame(width: 400, height: 400)
     }
 }

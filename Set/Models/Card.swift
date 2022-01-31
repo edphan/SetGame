@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Card {
+struct Card: Identifiable {
     var id: UUID
     var numberOfShapes: Int
     var color: Color
