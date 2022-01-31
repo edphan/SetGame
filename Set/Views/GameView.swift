@@ -11,6 +11,13 @@ struct GameView: View {
     
     @ObservedObject var game: SetGameViewModel
     
+    private let layouts = [
+        GridItem(.adaptive(minimum: 80)),
+        GridItem(.adaptive(minimum: 80)),
+        GridItem(.adaptive(minimum: 80)),
+        GridItem(.adaptive(minimum: 80))
+    ]
+    
     var body: some View {
         ZStack {
             // MARK: Background
@@ -19,7 +26,7 @@ struct GameView: View {
             
             VStack {
                 ScrollView {
-                    LazyVGrid(columns: [GridItem(), GridItem(), GridItem(), GridItem()]) {
+                    LazyVGrid(columns: layouts) {
                         ForEach(game.model.cards) { card in
                             CardView(card: card)
                         }
