@@ -14,5 +14,6 @@ struct Card: Identifiable {
     var color: Color
     var shape: CardShapes
     var shading: CardShadings
+    var isSelected = false
     var isMatched = false
 }

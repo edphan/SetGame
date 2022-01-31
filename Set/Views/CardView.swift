@@ -29,9 +29,13 @@ struct CardView: View {
     
     var body: some View {
         ZStack {
-            Rectangle()
-                .fill(.white)
+            ZStack {
+                Rectangle()
+                    .stroke(.green, lineWidth: card.isSelected ? 7 : 0)
+                Rectangle()
+                    .fill(.white)
                 .shadow(color: Color.gray.opacity(0.5), radius: 3, x: 1, y: 2)
+            }
                 
             VStack(spacing: 10) {
                 ForEach(0..<card.numberOfShapes, id: \.self) { _ in
@@ -55,7 +59,7 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(card: Card(id: UUID(), numberOfShapes: 3, color: Color.blue, shape: .diamond, shading: .transparent))
+        CardView(card: Card(id: UUID(), numberOfShapes: 3, color: Color.blue, shape: .diamond, shading: .transparent, isSelected: true))
             .frame(width: 400, height: 400)
     }
 }
