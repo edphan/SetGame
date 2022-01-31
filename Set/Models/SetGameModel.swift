@@ -20,15 +20,11 @@ struct SetGameModel {
             return
         }
         cards[choosenIndex].isSelected.toggle()
-        // check to see if the selected card is already in the selectedCards array, this is when user unclicks a card
-        // if it is, remove it, else append
-        if selectedCards.contains(card) == true {
-            selectedCards.removeAll { cardToRemove in
-                cardToRemove.id == card.id
-            }
-        } else {
-            selectedCards.append(cards[choosenIndex])
-        }
+        
+        // add all card with isSelected == true to selectedCards array
+        selectedCards = cards.filter({ card in
+            card.isSelected == true
+        })
         
         // check if there are 3 cards in the selectedCards array
         // if there are, call the check function then remove all cards from the selectedCards array
@@ -36,7 +32,11 @@ struct SetGameModel {
         // else, don't remove any card from the selectedCards array
         if selectedCards.count == 3 {
             // perform check here
+            
+            // remove all cards in the selectedCards array
+            selectedCards.removeAll()
         }
+        print(selectedCards)
     }
     
     // Check if the 3 selected cards matched
