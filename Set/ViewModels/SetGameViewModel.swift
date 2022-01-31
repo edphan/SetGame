@@ -39,6 +39,8 @@ class SetGameViewModel: ObservableObject {
     // Add 3 more cards
     
     // User selects a card
-    
+    func selectACard(selectedCard: Card) {
+        model.selectACard(card: selectedCard)
+    }
     // Check to see if the selected cards matched
 }

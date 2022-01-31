@@ -88,9 +88,7 @@
 			children = (
 				2BEA48E227A38D1700732E6F /* SetGameModel.swift */,
 				2B2601A427A249FD00F2416F /* Card.swift */,
-				2B127FD827A64CF200939353 /* CustomShape.swift */,
 				2BA38EBB27A4DD8B001893A4 /* CardFeatures.swift */,
-				2B127FD627A618DC00939353 /* Diamond.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -108,6 +106,8 @@
 			children = (
 				2B26019527A2330C00F2416F /* GameView.swift */,
 				2B2601A627A260BB00F2416F /* CardView.swift */,
+				2B127FD627A618DC00939353 /* Diamond.swift */,
+				2B127FD827A64CF200939353 /* CustomShape.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

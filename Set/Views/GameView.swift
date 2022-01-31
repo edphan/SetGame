@@ -29,6 +29,9 @@ struct GameView: View {
                     LazyVGrid(columns: layouts) {
                         ForEach(game.model.cards) { card in
                             CardView(card: card)
+                                .onTapGesture {
+                                    game.selectACard(selectedCard: card)
+                                }
                         }
                     }
                 }
