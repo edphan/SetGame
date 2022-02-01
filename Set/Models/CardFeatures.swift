@@ -7,13 +7,13 @@
 
 import Foundation
 
-enum CardShapes: CaseIterable {
+enum CardShapes: CaseIterable, Equatable {
     case rectangle
     case circle
     case diamond
 }
 
-enum CardShadings: CaseIterable {
+enum CardShadings: CaseIterable, Equatable {
     case transparent
     case open
     case solid
